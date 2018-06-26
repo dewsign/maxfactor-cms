@@ -1,3 +1,4 @@
+import RollupPluginVue from 'rollup-plugin-vue'
 import RollupPluginBabel from 'rollup-plugin-babel'
 
 export default {
@@ -6,8 +7,15 @@ export default {
         file: 'dist-js/index.js',
         format: 'cjs',
     },
-    external: [],
+    external: [
+        'vue',
+        'vuex',
+        'collect.js',
+        'maxfactor-vue-support',
+        'lodash',
+    ],
     plugins: [
+        RollupPluginVue(),
         RollupPluginBabel(),
     ],
 }

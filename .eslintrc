@@ -1,5 +1,4 @@
 {
-    "parser": "babel-eslint",
     "rules": {
         "semi": [
             "error",
@@ -9,9 +8,11 @@
             "error",
             4
         ],
-        "no-console": 1
+        "no-console": 1,
+        "radix": 0
     },
     "parserOptions": {
+        "parser": "babel-eslint",
         "ecmaVersion": 6,
         "sourceType": "module",
         "impliedStrict": true
@@ -22,7 +23,7 @@
         "node": true
     },
     "extends": [
-        "plugin:vue/recommended",
+        "plugin:vue/essential",
         "airbnb-base"
     ],
     "plugins": [
