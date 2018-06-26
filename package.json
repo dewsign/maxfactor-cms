@@ -9,6 +9,10 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "precommit": "lint-staged"
     },
+    "files": [
+        "dist-js/*",
+        "README.md"
+    ],
     "repository": {
         "type": "git",
         "url": "git+https://github.com/dewsign/maxfactor-cms.git"
