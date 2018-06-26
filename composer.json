@@ -1,0 +1,21 @@
+{
+    "name": "maxfactor/cms",
+    "description": "Maxfactor CMS",
+    "type": "library",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Marco Mark",
+            "email": "marco.mark@dewsign.co.uk"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dewsign\\CMS\\": "src-php/"
+        }
+    }
+}

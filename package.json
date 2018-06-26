@@ -1,0 +1,37 @@
+{
+    "name": "maxfactor-cms",
+    "version": "1.0.0",
+    "description": "Maxfactor CMS",
+    "main": "dist-js/index.js",
+    "scripts": {
+        "build": "rollup -c",
+        "watch": "rollup -mwc",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "precommit": "lint-staged"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dewsign/maxfactor-cms.git"
+    },
+    "author": "Marco Mark <marco.mark@dewsign.co.uk>",
+    "license": "GPL-3.0",
+    "bugs": {
+        "url": "https://github.com/dewsign/maxfactor-cms/issues"
+    },
+    "homepage": "https://github.com/dewsign/maxfactor-cms#readme",
+    "devDependencies": {
+        "babel-core": "^6.26.3",
+        "babel-eslint": "^8.0.2",
+        "babel-plugin-transform-object-rest-spread": "^6.26.0",
+        "babel-preset-es2015-rollup": "^3.0.0",
+        "eslint": "^5.0.1",
+        "eslint-config-airbnb-base": "^13.0.0",
+        "eslint-plugin-import": "^2.13.0",
+        "eslint-plugin-vue": "^4.5.0",
+        "husky": "^0.14.3",
+        "jsonlint": "^1.6.3",
+        "lint-staged": "^7.2.0",
+        "markdownlint-cli": "^0.10.0",
+        "rollup-plugin-babel": "^3.0.5"
+    }
+}
