@@ -3,8 +3,9 @@ import Language from './mixins/LanguageMixin'
 import ListView from './mixins/ListViewMixin'
 import DetailView from './mixins/DetailViewMixin'
 import RedirectTo from './mixins/RedirectToMixin'
-import FlashMessage from './mixins/FlashMessageMixin'
+import FlashMessage from './components/FlashMessage.vue'
 import CanCurrentUser from './mixins/CanCurrentUserMixin'
+import FlashMessageMixin from './mixins/FlashMessageMixin'
 import FilterItemProperties from './mixins/FilterItemPropertiesMixin'
 
 export default {
@@ -15,5 +16,6 @@ export default {
     RedirectTo,
     FlashMessage,
     CanCurrentUser,
+    FlashMessageMixin,
     FilterItemProperties,
 }
