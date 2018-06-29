@@ -15,7 +15,14 @@
     },
     "autoload": {
         "psr-4": {
-            "Dewsign\\CMS\\": "src-php/"
+            "Maxfactor\\CMS\\": "src-php/"
+        }
+    },
+    "extra":{
+        "laravel": {
+            "providers": [
+                "Maxfactor\\CMS\\Providers\\PackageServiceProvider"
+            ]
         }
     }
 }
