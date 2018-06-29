@@ -1,6 +1,6 @@
 {
     "name": "maxfactor-cms",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Maxfactor CMS",
     "main": "dist-js/index.js",
     "scripts": {
