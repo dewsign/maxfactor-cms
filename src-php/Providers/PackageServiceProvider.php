@@ -2,7 +2,9 @@
 
 namespace Maxfactor\CMS\Providers;
 
-class PackageServiceProvider
+use Illuminate\Support\ServiceProvider;
+
+class PackageServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
