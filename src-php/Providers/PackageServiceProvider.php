@@ -2,6 +2,9 @@
 
 namespace Maxfactor\CMS\Providers;
 
+use Barryvdh\Cors\HandleCors;
+use Illuminate\Routing\Router;
+use Maxfactor\CMS\Commands\MakeAdmin;
 use Illuminate\Support\ServiceProvider;
 
 class PackageServiceProvider extends ServiceProvider
@@ -11,10 +14,15 @@ class PackageServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(Router $router)
     {
-        //
+        $this->registerCors($router);
+        $this->bootAssets();
+        $this->bootViews();
+        $this->bootCommands();
+        $this->publishDatabaseFiles();
     }
+
     /**
      * Register the application services.
      *
@@ -24,6 +32,21 @@ class PackageServiceProvider extends ServiceProvider
     {
         //
     }
+
+    /**
+     * Register the artisan packages' terminal commands
+     *
+     * @return void
+     */
+    private function bootCommands()
+    {
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                MakeAdmin::class,
+            ]);
+        }
+    }
+
     /**
      * Load custom views
      *
@@ -31,6 +54,43 @@ class PackageServiceProvider extends ServiceProvider
      */
     private function bootViews()
     {
-        //
+        $this->loadViewsFrom(__DIR__.'/../Resources/views', 'maxfactor');
+        $this->publishes([
+            __DIR__.'/../Resources/views' => resource_path('views/vendor/maxfactor'),
+        ]);
+    }
+
+    /**
+     * Define publishable assets
+     *
+     * @return void
+     */
+    private function bootAssets()
+    {
+        $this->publishes([
+            __DIR__.'/../Resources/assets/js' => resource_path('assets/js/vendor/maxfactor'),
+        ], 'js');
+    }
+
+    /**
+     * Make CORS middleware available to routes
+     *
+     * @param Router $router
+     * @return void
+     */
+    private function registerCors(Router $router)
+    {
+        $router->aliasMiddleware('cors', HandleCors::class);
+    }
+
+    private function publishDatabaseFiles()
+    {
+        $this->app->make('Illuminate\Database\Eloquent\Factory')->load(
+            __DIR__ . '/../Database/factories'
+        );
+
+        $this->publishes([
+            __DIR__ . '/../Database' => base_path('database')
+        ], 'database');
     }
 }

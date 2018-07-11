@@ -4,8 +4,161 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "57e78f83b314c3fe91db14a3e9039762",
+    "content-hash": "42c85cf07f75d6da5b96e8313e6825e5",
     "packages": [
+        {
+            "name": "asm89/stack-cors",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/asm89/stack-cors.git",
+                "reference": "c163e2b614550aedcf71165db2473d936abbced6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/asm89/stack-cors/zipball/c163e2b614550aedcf71165db2473d936abbced6",
+                "reference": "c163e2b614550aedcf71165db2473d936abbced6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9",
+                "symfony/http-foundation": "~2.7|~3.0|~4.0",
+                "symfony/http-kernel": "~2.7|~3.0|~4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.0 || ^4.8.10",
+                "squizlabs/php_codesniffer": "^2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Asm89\\Stack\\": "src/Asm89/Stack/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander",
+                    "email": "iam.asm89@gmail.com"
+                }
+            ],
+            "description": "Cross-origin resource sharing library and stack middleware",
+            "homepage": "https://github.com/asm89/stack-cors",
+            "keywords": [
+                "cors",
+                "stack"
+            ],
+            "time": "2017-12-20T14:37:45+00:00"
+        },
+        {
+            "name": "barryvdh/laravel-cors",
+            "version": "v0.11.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/barryvdh/laravel-cors.git",
+                "reference": "6ba64a654b4258a3ecc11aba6614c932b3442e30"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/barryvdh/laravel-cors/zipball/6ba64a654b4258a3ecc11aba6614c932b3442e30",
+                "reference": "6ba64a654b4258a3ecc11aba6614c932b3442e30",
+                "shasum": ""
+            },
+            "require": {
+                "asm89/stack-cors": "^1.2",
+                "illuminate/support": "5.3.x|5.4.x|5.5.x|5.6.x",
+                "php": ">=5.5.9",
+                "symfony/http-foundation": "^3.1|^4",
+                "symfony/http-kernel": "^3.1|^4"
+            },
+            "require-dev": {
+                "orchestra/testbench": "3.x",
+                "phpunit/phpunit": "^4.8|^5.2",
+                "squizlabs/php_codesniffer": "^2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.11-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Barryvdh\\Cors\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Barryvdh\\Cors\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Barry vd. Heuvel",
+                    "email": "barryvdh@gmail.com"
+                }
+            ],
+            "description": "Adds CORS (Cross-Origin Resource Sharing) headers support in your Laravel application",
+            "keywords": [
+                "api",
+                "cors",
+                "crossdomain",
+                "laravel"
+            ],
+            "time": "2018-01-04T06:59:27+00:00"
+        },
+        {
+            "name": "dewsign/pusher-agent",
+            "version": "v1.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dewsign/ajax-store.git",
+                "reference": "2fe82808d3ad8e017cff08c3d230050a9620098c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dewsign/ajax-store/zipball/2fe82808d3ad8e017cff08c3d230050a9620098c",
+                "reference": "2fe82808d3ad8e017cff08c3d230050a9620098c",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^5.4|^5.5|^5.6",
+                "php": ">=7.1.0"
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "^3.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Dewsign\\PusherAgent\\": "laravel/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Marco Mark",
+                    "email": "marco.mark@dewsign.co.uk"
+                }
+            ],
+            "description": "Vuex/Axios/Pusher store to enable SPAs to work with remote data without needing to interact with Ajax",
+            "time": "2018-06-25T14:24:35+00:00"
+        },
         {
             "name": "doctrine/inflector",
             "version": "v1.3.0",
@@ -905,6 +1058,57 @@
                 "uuid"
             ],
             "time": "2018-01-20T00:28:24+00:00"
+        },
+        {
+            "name": "silvanite/brandenburg",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Silvanite/brandenburg.git",
+                "reference": "bce1d18cbdbfe2f5cb2dc65ab4ab2c539687e432"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Silvanite/brandenburg/zipball/bce1d18cbdbfe2f5cb2dc65ab4ab2c539687e432",
+                "reference": "bce1d18cbdbfe2f5cb2dc65ab4ab2c539687e432",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^3.5",
+                "phpunit/phpunit": "^6.4",
+                "squizlabs/php_codesniffer": "^3.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Silvanite\\Brandenburg\\Providers\\BrandenburgServiceProvider"
+                    ],
+                    "aliases": {
+                        "BrandenburgPolicy": "Silvanite\\Brandenburg\\Facades\\PolicyFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Silvanite\\Brandenburg\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Marco Mark (m2de)",
+                    "email": "marco@silvanite.com"
+                }
+            ],
+            "description": "Laravel Authentication Package",
+            "time": "2018-03-19T15:27:36+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
