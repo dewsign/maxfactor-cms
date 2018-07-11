@@ -9,7 +9,8 @@
             4
         ],
         "no-console": 1,
-        "radix": 0
+        "radix": 0,
+        "vue/html-indent": ["error", 4]
     },
     "parserOptions": {
         "parser": "babel-eslint",
@@ -23,7 +24,7 @@
         "node": true
     },
     "extends": [
-        "plugin:vue/essential",
+        "plugin:vue/recommended",
         "airbnb-base"
     ],
     "plugins": [
