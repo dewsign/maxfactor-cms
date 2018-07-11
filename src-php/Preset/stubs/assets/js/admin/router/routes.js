@@ -11,31 +11,49 @@ export default [
         path: '/user',
         name: 'user.index',
         component: UserIndex,
+        meta: {
+            title: 'All User Accounts',
+        },
     },
     {
         path: '/user/create',
         name: 'user.create',
         component: UserShow,
+        meta: {
+            title: 'Create a new User Account',
+        },
     },
     {
         path: '/user/:id',
         name: 'user.show',
         component: UserShow,
+        meta: {
+            title: 'Edit User',
+        },
     },
     {
         path: '/role',
         name: 'role.index',
         component: RoleIndex,
+        meta: {
+            title: 'All Roles',
+        },
     },
     {
         path: '/role/create',
         name: 'role.create',
         component: RoleShow,
+        meta: {
+            title: 'Create a new Role',
+        },
     },
     {
         path: '/role/:id',
         name: 'role.show',
         component: RoleShow,
+        meta: {
+            title: 'Edit Role',
+        },
     },
     // {
     //     path: '/language',
