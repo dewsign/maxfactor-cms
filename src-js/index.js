@@ -1,3 +1,4 @@
+import App from './App.vue'
 import Toolbar from './mixins/ToolbarMixin'
 import Language from './mixins/LanguageMixin'
 import ListView from './mixins/ListViewMixin'
@@ -9,6 +10,7 @@ import FlashMessageMixin from './mixins/FlashMessageMixin'
 import FilterItemProperties from './mixins/FilterItemPropertiesMixin'
 
 export default {
+    App,
     Toolbar,
     Language,
     ListView,
