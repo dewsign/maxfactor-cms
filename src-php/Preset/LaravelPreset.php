@@ -16,7 +16,7 @@ class LaravelPreset extends Preset
         static::updateControllers();
         static::updateModels();
         // static::updateStyles();
-        // static::updateScripts();
+        static::updateScripts();
         static::updatePackages();
     }
 
