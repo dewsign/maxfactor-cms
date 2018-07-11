@@ -3,12 +3,31 @@
 namespace Maxfactor\CMS\Providers;
 
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Broadcast;
 use Silvanite\Brandenburg\Traits\ValidatesPermissions;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
 class AuthServiceProvider extends ServiceProvider
 {
     use ValidatesPermissions;
+
+    /**
+     * Bootstrap any application services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        collect([
+            'user' => 'access_admin_users',
+            'role' => 'access_admin_roles',
+            'permission' => 'access_admin_permissions',
+        ])->each(function ($channel, $permission) {
+            Broadcast::channel($channel, function () use ($permission) {
+                return Gate::allows($permission);
+            });
+        });
+    }
 
     /**
      * Register any authentication / authorization services.
