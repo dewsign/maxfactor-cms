@@ -22,7 +22,7 @@ class AuthServiceProvider extends ServiceProvider
             'user' => 'access_admin_users',
             'role' => 'access_admin_roles',
             'permission' => 'access_admin_permissions',
-        ])->each(function ($channel, $permission) {
+        ])->each(function ($permission, $channel) {
             Broadcast::channel($channel, function () use ($permission) {
                 return Gate::allows($permission);
             });
