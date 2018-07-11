@@ -2,6 +2,7 @@
 
 namespace Maxfactor\CMS\Providers;
 
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 
@@ -15,6 +16,13 @@ class RouteServiceProvider extends ServiceProvider
      * @var string
      */
     protected $namespace = 'Maxfactor\CMS\Http\Controllers';
+
+    /**
+     * This is the namespace of the default Laravel Project
+     *
+     * @var string
+     */
+    protected $appNamespace = 'App\Http\Controllers';
 
     /**
      * Define your route model bindings, pattern filters, etc.
@@ -34,6 +42,7 @@ class RouteServiceProvider extends ServiceProvider
     public function map()
     {
         $this->mapAuthRoutes();
+        $this->mapAdminRoutes();
     }
 
     /**
@@ -48,5 +57,27 @@ class RouteServiceProvider extends ServiceProvider
         Route::middleware('web')
              ->namespace($this->namespace . '\Auth')
              ->group(__DIR__ . ('/../Routes/auth.php'));
+    }
+
+    /**
+     * Automatically load admin routes in the main project.
+     *
+     * These routes are typically stateless.
+     *
+     * @return void
+     */
+    protected function mapAdminRoutes()
+    {
+        /**
+         * Because the admin routes file is installed by the Laravel Preset it may not exist when
+         * the service provider is first loaded, so we run this check and bail to avoid errors.
+         */
+        if (!File::exists(base_path('routes/admin.php'))) {
+            return;
+        }
+
+        Route::middleware('web')
+             ->namespace($this->appNamespace)
+             ->group(base_path('routes/admin.php'));
     }
 }

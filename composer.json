@@ -29,7 +29,8 @@
             "providers": [
                 "Maxfactor\\CMS\\Providers\\PackageServiceProvider",
                 "Maxfactor\\CMS\\Providers\\AuthServiceProvider",
-                "Maxfactor\\CMS\\Providers\\RouteServiceProvider"
+                "Maxfactor\\CMS\\Providers\\RouteServiceProvider",
+                "Maxfactor\\CMS\\Providers\\PresetServiceProvider"
             ]
         }
     }
