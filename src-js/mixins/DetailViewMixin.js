@@ -5,6 +5,7 @@ import Toolbar from './ToolbarMixin'
 import RedirectTo from './RedirectToMixin'
 import FlashMessage from './FlashMessageMixin'
 import CanCurrentUser from './CanCurrentUserMixin'
+import ContentCard from '../components/ContentCard.vue'
 import DirtyDialog from '../components/DirtyDialog.vue'
 import DeleteDialog from '../components/DeleteDialog.vue'
 
@@ -18,6 +19,7 @@ export default {
     ],
 
     components: {
+        ContentCard,
         DirtyDialog,
         DeleteDialog,
     },
