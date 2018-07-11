@@ -13,7 +13,8 @@
         "laravel/framework": "^5",
         "barryvdh/laravel-cors": "^0.11.0",
         "silvanite/brandenburg": "^1.0",
-        "dewsign/pusher-agent": "^1.0"
+        "dewsign/pusher-agent": "^1.0",
+        "tightenco/ziggy": "^0.6.6"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.1"
