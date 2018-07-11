@@ -71,7 +71,7 @@ class RoleController extends Controller
      * @param  \Silvanite\Brandenburg\Role  $role
      * @return \Illuminate\Http\Response
      */
-    public function update(RoleRequest $request, Role $role, string $locale = null)
+    public function update(RoleRequest $request, string $locale = null, Role $role)
     {
         $role->fill([
             'name' => $request['name'],
@@ -95,7 +95,7 @@ class RoleController extends Controller
      * @param  \Silvanite\Brandenburg\Role  $role
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Role $role, string $locale = null)
+    public function destroy(string $locale = null, Role $role)
     {
         $role->delete();
 

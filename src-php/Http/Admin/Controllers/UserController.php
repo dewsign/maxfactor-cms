@@ -51,7 +51,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(string $locale, int $id)
+    public function show(string $locale = null, int $id)
     {
         return User::withRoles()->findOrFail($id);
     }
@@ -63,7 +63,7 @@ class UserController extends Controller
      * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(UserRequest $request, User $user, string $locale = null)
+    public function update(UserRequest $request, string $locale = null, User $user)
     {
         $user->fill([
             'name' => $request['name'],
@@ -87,7 +87,7 @@ class UserController extends Controller
      * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user, string $locale = null)
+    public function destroy(string $locale = null, User $user)
     {
         $user->delete();
 
