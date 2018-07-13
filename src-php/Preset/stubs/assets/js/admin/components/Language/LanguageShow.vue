@@ -40,8 +40,9 @@
                 >Save</v-btn>
 
                 <delete-dialog
-                    v-if="isShowView"
+                    :open="showDelete"
                     @confirm="destroy"
+                    @close="showDelete = false"
                 />
 
                 <dirty-dialog
@@ -71,6 +72,7 @@ export default {
         return {
             routeNamespace: 'admin.language', // Laravel
             indexRouteName: 'language.index', // Vuex
+            toolbar: [],
         }
     },
 
