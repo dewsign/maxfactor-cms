@@ -1,4 +1,4 @@
-@extends('maxfactor::layouts.default')
+@extends('maxfactor::layouts.minimal')
 
 @section('browser_title', 'Register')
 
@@ -8,7 +8,7 @@
         <h1>@lang('Register')</h1>
 
         <div class="form">
-            <form method="POST" action="{{ route('register.store') }}">
+            <form method="POST" action="{{ route('register.submit') }}">
                 {{ csrf_field() }}
 
                 @include('maxfactor::partials.form.name')

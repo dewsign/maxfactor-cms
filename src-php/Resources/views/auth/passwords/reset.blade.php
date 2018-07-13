@@ -1,4 +1,4 @@
-@extends('maxfactor::layouts.default')
+@extends('maxfactor::layouts.minimal')
 
 @section('browser_title', 'Reset Password')
 

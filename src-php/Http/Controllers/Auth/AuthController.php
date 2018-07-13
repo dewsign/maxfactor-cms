@@ -23,7 +23,6 @@ class AuthController extends Controller
      */
     public function showLoginForm()
     {
-        // dd('foo');
         return view('maxfactor::auth.login');
     }
 
