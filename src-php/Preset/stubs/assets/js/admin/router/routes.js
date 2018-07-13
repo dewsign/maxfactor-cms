@@ -1,9 +1,9 @@
-import UserIndex from '../components/User/UserIndex.vue'
 import UserShow from '../components/User/UserShow.vue'
-import RoleIndex from '../components/User/Role/RoleIndex.vue'
+import UserIndex from '../components/User/UserIndex.vue'
 import RoleShow from '../components/User/Role/RoleShow.vue'
-// import LanguageIndex from '../components/Language/LanguageIndex.vue'
-// import LanguageShow from '../components/Language/LanguageShow.vue'
+import RoleIndex from '../components/User/Role/RoleIndex.vue'
+import LanguageShow from '../components/Language/LanguageShow.vue'
+import LanguageIndex from '../components/Language/LanguageIndex.vue'
 
 
 export default [
@@ -55,19 +55,28 @@ export default [
             title: 'Edit Role',
         },
     },
-    // {
-    //     path: '/language',
-    //     name: 'language.index',
-    //     component: LanguageIndex,
-    // },
-    // {
-    //     path: '/language/create',
-    //     name: 'language.create',
-    //     component: LanguageShow,
-    // },
-    // {
-    //     path: '/language/:id',
-    //     name: 'language.show',
-    //     component: LanguageShow,
-    // },
+    {
+        path: '/language',
+        name: 'language.index',
+        component: LanguageIndex,
+        meta: {
+            title: 'All Languages',
+        },
+    },
+    {
+        path: '/language/create',
+        name: 'language.create',
+        component: LanguageShow,
+        meta: {
+            title: 'Add another Language',
+        },
+    },
+    {
+        path: '/language/:id',
+        name: 'language.show',
+        component: LanguageShow,
+        meta: {
+            title: 'Edit Language',
+        },
+    },
 ]

@@ -21,6 +21,7 @@ class AuthServiceProvider extends ServiceProvider
         collect([
             'user' => 'access_admin_users',
             'role' => 'access_admin_roles',
+            'language' => 'access_admin_languages',
             'permission' => 'access_admin_permissions',
         ])->each(function ($permission, $channel) {
             Broadcast::channel($channel, function () use ($permission) {
@@ -40,6 +41,7 @@ class AuthServiceProvider extends ServiceProvider
             'access_admin',
             'access_admin_users',
             'access_admin_roles',
+            'access_admin_languages',
             'access_admin_permissions',
         ]);
 
