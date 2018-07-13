@@ -1,8 +1,11 @@
 <?php
 
+namespace Maxfactor\CMS\Database\Seeds;
+
+use Maxfactor\CMS\Models\User;
 use Illuminate\Database\Seeder;
 
-class UsersTableSeeder extends Seeder
+class UserTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +14,6 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        factory('App\User', 5)->create();
+        factory(User::class, 20)->create();
     }
 }

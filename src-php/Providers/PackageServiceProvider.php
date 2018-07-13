@@ -85,12 +85,22 @@ class PackageServiceProvider extends ServiceProvider
 
     private function publishDatabaseFiles()
     {
+        $this->loadMigrationsFrom(__DIR__.'/../Database/migrations');
+
         $this->app->make('Illuminate\Database\Eloquent\Factory')->load(
             __DIR__ . '/../Database/factories'
         );
 
         $this->publishes([
-            __DIR__ . '/../Database' => base_path('database')
-        ], 'database');
+            __DIR__ . '/../Database/factories' => base_path('database/factories')
+        ], 'factories');
+
+        $this->publishes([
+            __DIR__ . '/../Database/migrations' => base_path('database/migrations')
+        ], 'migrations');
+
+        $this->publishes([
+            __DIR__ . '/../Database/seeds' => base_path('database/seeds')
+        ], 'seeds');
     }
 }

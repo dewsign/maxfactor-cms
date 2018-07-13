@@ -15,6 +15,7 @@ class LaravelPreset extends Preset
         static::updateRoutes();
         static::updateControllers();
         static::updateModels();
+        static::updateDatabase();
         // static::updateStyles();
         static::updateScripts();
         static::updatePackages();
@@ -53,6 +54,16 @@ class LaravelPreset extends Preset
     public static function updateMix()
     {
         copy(__DIR__.'/stubs/webpack.mix.js', base_path('webpack.mix.js'));
+    }
+
+    /**
+     * Prepare the default database seeder to include the package seeds
+     *
+     * @return void
+     */
+    public static function updateDatabase()
+    {
+        copy(__DIR__.'/stubs/database/seeds/DatabaseSeeder.php', base_path('database/seeds/DatabaseSeeder.php'));
     }
 
     /**

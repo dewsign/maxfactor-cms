@@ -1,6 +1,10 @@
 <?php
 
+namespace Maxfactor\CMS\Database\Seeds;
+
+use Maxfactor\CMS\Models\Role;
 use Illuminate\Database\Seeder;
+use Silvanite\Brandenburg\Policy;
 
 class RoleTableSeeder extends Seeder
 {
@@ -11,6 +15,6 @@ class RoleTableSeeder extends Seeder
      */
     public function run()
     {
-        factory('Maxfactor\CMS\Models\Role', 5)->create();
+        factory(Role::class, 5)->create();
     }
 }
