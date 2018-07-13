@@ -1,0 +1,123 @@
+// Site spacings
+$tiny: 350px;
+$vsmall: 400px;
+$small: 600px;
+$medium: 900px;
+$large: 1100px;
+$vlarge: 1160px;
+
+$site-width-narrow: $medium;
+$site-width: $vlarge;
+$site-width-wide: 1240px;
+
+$site-spacing: 10px;
+
+// Breakpoints
+$max: max-width;
+$min: min-width;
+$breakpoints: (
+    'tiny': $tiny,
+    'vsmall': $vsmall,
+    'small': $small,
+    'medium': $medium,
+    'large': $large,
+    'vlarge': $vlarge,
+    'sitewide': $site-width-wide + $site-spacing*4,
+    'superwide': $medium*2
+);
+
+// Transitions
+$transition-primary: 0.25s ease-in-out;
+$transition-secondary: 0.1s ease-in-out;
+
+// Font families
+$font-family-primary: 'Karla', sans-serif;
+$font-family-secondary: 'Merriweather', serif;
+
+// Font weights
+$font-weight-primary: 700;
+$font-weight-secondary: 900;
+$font-weight-alternative: 400;
+
+// Font sizes
+$font-sizes: (
+    'small': 1.4rem,
+    'p': 1.6rem,
+    'h5': 1.7rem,
+    'h4': 1.8rem,
+    'h3': 2.2rem,
+    'h2': 2.8rem,
+    'h1': 3.6rem
+);
+
+$font-sizes-mobile: (
+    'small': 1.2rem,
+    'p': 1.4rem,
+    'h5': 1.7rem,
+    'h4': 1.8rem,
+    'h3': 2rem,
+    'h2': 2.6rem,
+    'h1': 3rem
+);
+
+// Line heights
+$line-heights: (
+    'small': 1.5,
+    'p': 1.7,
+    'h5': 1.6,
+    'h4': 1.4,
+    'h3': 1.4,
+    'h2': 1.4,
+    'h1': 1.4
+);
+
+// Letter spacing
+$letter-spacing: 0.02em;
+$letter-spacing-wide: 0.06em;
+
+// Colours
+$colours: (
+    'black': #111,
+    'white': #fff,
+    'lightest-grey': #f6f6f6,
+    'light-grey': #d8d8d8,
+    'medium-grey': #777,
+    'grey': #6e6e6e,
+    'dark-grey': #222,
+    'brand-1': #0a8cd1,
+    'brand-2': #11b7bc,
+    'brand-3': #003764,
+    'error': #e00000,
+    'facebook': #305c99,
+    'twitter': #3aaef0,
+    'pinterest': #d32c1f,
+    'email': #6e6e6e,
+    // TODO: Fix issue in Maxfactor Sass that means `brand2` is required
+    'brand2': #000
+);
+
+// General colours
+$colour-primary: map-get($colours, 'black');
+$colour-secondary: map-get($colours, 'brand-1');
+$colour-button: $colour-primary;
+$colour-border: $colour-primary;
+$colour-background: map-get($colours, 'lightest-grey');
+
+// Font colours
+$colour-font-dark: $colour-primary;
+$colour-font-dark-active: map-get($colours, 'brand-1');
+$colour-font-medium: map-get($colours, 'medium-grey');
+$colour-font-medium-active: $colour-primary;
+$colour-link: $colour-secondary;
+$colour-link-active: map-get($colours, 'medium-grey');
+
+// Borders
+$border-primary: 1px solid map-get($colours, '0a8cd1');
+$border-secondary: 1px solid map-get($colours, 'black');
+$border-alternative: 1px solid map-get($colours, 'medium-grey');
+$border-white: 1px solid map-get($colours, 'white');
+$border-faint: 1px solid map-get($colours, 'light-grey');
+$border-fainter: 2px solid map-get($colours, 'lightest-grey');
+
+// Border radius
+$border-radius-primary: 5px;

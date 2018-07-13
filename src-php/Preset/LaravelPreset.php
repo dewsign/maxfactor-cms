@@ -16,7 +16,7 @@ class LaravelPreset extends Preset
         static::updateControllers();
         static::updateModels();
         static::updateDatabase();
-        // static::updateStyles();
+        static::updateStyles();
         static::updateScripts();
         static::updatePackages();
     }
@@ -34,6 +34,7 @@ class LaravelPreset extends Preset
             'ajax-store' => '^1.0.6',
             'browser-sync' => '2.24.5',
             'browser-sync-webpack-plugin' => '2.2.2',
+            'maxfactor-sass' => '^1.7.6',
             'vue' => '^2.5.16',
             'vue-router' => '^3.0.1',
             'vuetify' => '^1.1.4',
@@ -128,9 +129,9 @@ class LaravelPreset extends Preset
      */
     public static function updateStyles()
     {
-        File::cleanDirectory(resource_path('assets/sass'));
-
-        copy(__DIR__.'/stubs/app.sass', resource_path('assets/sass/app.sass'));
+        File::deleteDirectory(resource_path('assets/sass'));
+        File::cleanDirectory(resource_path('assets/scss'));
+        File::copyDirectory(self::stubsFolder('assets/scss'), resource_path('assets/scss'));
     }
 
     /**

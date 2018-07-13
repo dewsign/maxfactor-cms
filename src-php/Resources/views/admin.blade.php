@@ -29,6 +29,8 @@
         {{-- Make Laravel named routes available in JavaScript  --}}
         @routes
 
+        <script type="text/javascript" src="{{ mix('js/manifest.js') }}"></script>
+        <script type="text/javascript" src="{{ mix('js/vendor.js') }}"></script>
         <script type="text/javascript" src="{{ mix('js/admin.js') }}"></script>
 
     </body>

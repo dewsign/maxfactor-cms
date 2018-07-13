@@ -1,6 +1,9 @@
 const mix = require('laravel-mix')
 
 mix.js('resources/assets/js/admin.js', 'public/js')
+    .js('resources/assets/js/web.js', 'public/js')
+    .sass('resources/assets/scss/web.scss', 'public/css')
+    .extract(['vue', 'axios'])
     .sourceMaps()
     .browserSync({
         proxy: process.env.PROXY_URL || process.env.APP_URL,
