@@ -28,6 +28,7 @@
     <exclude-pattern>*/docs/*</exclude-pattern>
     <exclude-pattern>*/vendor/*</exclude-pattern>
     <exclude-pattern>*/node_modules/*</exclude-pattern>
+    <exclude-pattern>*/database/*</exclude-pattern>
 
     <!--
        You can hard-code command line values into your custom standard.
