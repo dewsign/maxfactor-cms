@@ -16,7 +16,7 @@
 
                     @include('maxfactor::partials.form.password')
 
-                    <div class="form__field form__field--flex">
+                    <div class="form__field">
                         <label>
                             <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> @lang('Remember Me')
                         </label>
@@ -27,7 +27,7 @@
                     </div>
 
                     <div class="form__field">
-                        <button type="submit" class="button button--primary">
+                        <button type="submit" class="button button--authentication">
                             @lang('Login')
                         </button>
                     </div>
