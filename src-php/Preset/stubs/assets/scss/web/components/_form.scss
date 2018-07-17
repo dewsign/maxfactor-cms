@@ -1,0 +1,147 @@
+/** @define form **/
+.form {
+    &__field {
+        margin: $site-spacing 0;
+        width: 100%;
+    }
+
+    &__field--flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        label {
+            flex-basis: 50%;
+        }
+    }
+
+    &__fields {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+
+        form {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        h2,
+        h3,
+        h4 {
+            display: flex;
+            flex-flow: row wrap;
+            width: 100%;
+            margin-bottom: $site-spacing;
+
+            label {
+                flex-grow: 1;
+                align-self: flex-end;
+                color: $colour-primary;
+                margin-bottom: 0;
+
+                @include type-setting('p');
+
+                @include respond-to($min, small) {
+                    text-align: right;
+                }
+
+                @include respond-to($max, small) {
+                    margin-top: 30px;
+                    width: 100%;
+                }
+            }
+        }
+
+        &--general {
+            @extend .form__fields;
+
+            margin-bottom: $site-spacing*6;
+
+            p {
+                max-width: none;
+            }
+        }
+    }
+
+    @include respond-to($min, small) {
+        &__field--half {
+            width: calc(50% - #{$site-spacing});
+            max-width: 460px;
+        }
+
+        &__field--clear-right {
+            width: 100%;
+            max-width: none;
+
+            input {
+                width: calc(50% - #{$site-spacing});
+                max-width: 460px;
+            }
+        }
+    }
+
+    &__field--invalid {
+        input {
+            padding: $site-spacing/1.4 - 3px;
+            border: solid 3px $colour-primary;
+        }
+
+        &::after {
+            content: 'Required';
+            display: block;
+        }
+    }
+}
+
+.generic__continue {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @include respond-to($max, ipadl) {
+        flex-direction: column-reverse;
+    }
+
+    a {
+        align-self: center;
+
+        @include respond-to($max, vsmall) {
+            font-size: 1.7rem;
+        }
+    }
+
+    .checkout__return-cart {
+        @include respond-to($min, ipadl) {
+            margin-right: 40px;
+        }
+    }
+
+    .btn-primary {
+        @include type-setting('h4');
+
+        min-width: 250px;
+        text-align: center;
+
+        @include respond-to($max, vsmall) {
+            padding: 15px $site-spacing;
+        }
+    }
+}
+
+/**
+ * Form input error message
+ */
+.error-message {
+    display: block;
+    margin-top: $site-spacing/2;
+    color: map-get($colours, 'error');
+}
+
+/**
+ * Discount success message
+ */
+.applied-message {
+    display: block;
+    margin-top: $site-spacing/2;
+}

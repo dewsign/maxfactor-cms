@@ -1,0 +1,151 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    @include type-setting('p');
+
+    font-family: $font-family-primary;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: $letter-spacing;
+    color: $colour-font-dark;
+
+    @include respond-to($max, medium) {
+        @include type-setting-mobile('p');
+    }
+}
+
+%heading {
+    font-family: $font-family-secondary;
+    font-weight: $font-weight-primary;
+    font-style: normal;
+    color: inherit;
+}
+
+h1 {
+    @extend %heading;
+
+    @include type-setting('h1');
+
+    margin-bottom: $site-spacing*4;
+
+    @include respond-to($max, small) {
+        margin-bottom: $site-spacing*2;
+    }
+
+    @include respond-to($max, medium) {
+        @include type-setting-mobile('h1');
+    }
+}
+
+h2 {
+    @extend %heading;
+
+    @include type-setting('h2');
+
+    margin-bottom: $site-spacing*4;
+
+    @include respond-to($max, small) {
+        margin-bottom: $site-spacing*2;
+    }
+
+    @include respond-to($max, medium) {
+        @include type-setting-mobile('h2');
+    }
+}
+
+h3 {
+    @extend %heading;
+
+    @include type-setting('h3');
+
+    margin-bottom: $site-spacing*2;
+
+    @include respond-to($max, medium) {
+        @include type-setting-mobile('h3');
+    }
+}
+
+h4 {
+    @extend %heading;
+
+    @include type-setting('h4');
+
+    margin-bottom: $site-spacing*2;
+
+    @include respond-to($max, medium) {
+        @include type-setting-mobile('h4');
+    }
+}
+
+h5 {
+    @extend %heading;
+
+    @include type-setting('h5');
+
+    margin-bottom: $site-spacing;
+
+    @include respond-to($max, medium) {
+        @include type-setting-mobile('h5');
+    }
+}
+
+strong {
+    font-weight: normal;
+    font-family: $font-family-secondary;
+}
+
+p {
+    @include type-setting('p');
+
+    margin: 0;
+    word-wrap: break-word;
+
+    &:not(:last-child) {
+        margin-bottom: $site-spacing;
+    }
+
+    i {
+        font-style: italic;
+    }
+
+    @include respond-to($max, medium) {
+        @include type-setting-mobile('p');
+    }
+}
+
+small,
+.small {
+    @include type-setting('small');
+}
+
+input,
+textarea,
+button,
+select {
+    @include type-setting('p');
+
+    font-family: $font-family-primary;
+    letter-spacing: inherit;
+    color: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: all $transition-primary;
+
+    &:hover {
+        color: $colour-link-active;
+    }
+}
+
+abbr {
+    text-decoration: none;
+    font-weight: inherit;
+}
+
+sup {
+    color: inherit;
+}

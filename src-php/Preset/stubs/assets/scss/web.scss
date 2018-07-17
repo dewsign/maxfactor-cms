@@ -3,3 +3,16 @@
 
 // Maxfactor Sass
 @import "~maxfactor-sass";
+
+// admin login
+@import "admin/login";
+
+// Components
+@import "web/components/buttons";
+@import "web/components/form";
+@import "web/components/input";
+@import "web/components/label";
+
+// Type
+@import "web/utilities/type";
+

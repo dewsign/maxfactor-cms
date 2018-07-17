@@ -1,0 +1,38 @@
+input {
+    &[type="checkbox"] {
+        display: inline-block;
+        max-width: 30px;
+    }
+
+    &[type="number"] {
+        -moz-appearance: textfield;
+    }
+
+    &[type="text"],
+    &[type="email"],
+    &[type="number"],
+    &[type="password"],
+    &[type="tel"] {
+        background-color: map-get($colours, 'grey-5');
+        padding: $site-spacing/2 $site-spacing;
+        border: none;
+        border-radius: $border-radius-primary;
+        width: 100%;
+        transition: border $transition-secondary, box-shadow $transition-secondary;
+        outline: none;
+
+        &[aria-invalid="true"] {
+            box-shadow: 0 0 0 3px map-get($colours, 'error') inset;
+        }
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 3px $colour-secondary inset;
+        }
+    }
+}

@@ -1,0 +1,91 @@
+button {
+    border: none;
+    display: block;
+    cursor: pointer;
+    padding: 0;
+
+    &[disabled] {
+        cursor: default;
+        color: $colour-font-dark !important;
+        background-color: map-get($colours, 'grey-5') !important;
+    }
+}
+
+/** @define button */
+.button {
+    display: inline-block;
+    padding: $site-spacing/2 $site-spacing*2;
+    font-family: $font-family-primary;
+    font-weight: $font-weight-secondary;
+    box-sizing: border-box;
+    border-radius: $border-radius-secondary;
+    transition: color $transition-secondary, background-color $transition-secondary;
+
+    svg {
+        vertical-align: top;
+    }
+
+    /**
+    * Create styling for primary buttons
+    */
+
+    @each $name, $colour in $colours {
+        &--#{$name} {
+            color: map-get($colours, 'white');
+            background-color: $colour;
+
+            &:hover {
+                color: map-get($colours, 'white');
+                background-color: darken($colour, 10%);
+            }
+        }
+    }
+
+    /**
+    * Create styling for each sharing button
+    */
+    $networks: 'facebook', 'twitter', 'pinterest', 'email';
+
+    @each $network in $networks {
+        &--#{$network} {
+            $colour: map-get($colours, #{$network});
+
+            background-color: $colour;
+            color: map-get($colours, 'white');
+
+            &::after {
+                background-image: url('/icons/#{$network}--white.svg');
+            }
+
+            &:hover {
+                background-color: darken($colour, 10%);
+                color: map-get($colours, 'white');
+            }
+        }
+    }
+
+    &-burger {
+        span {
+            background-color: map-get($colours, 'white');
+            display: block;
+            width: $site-spacing*2;
+            height: 2px;
+            transition: transform 0.1s;
+
+            &:not(:last-of-type) {
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+
+// Legacy button styling
+.btn-primary,
+.button--primary {
+    @extend .button, .button--brand-1;
+}
+
+.btn-secondary,
+.button--secondary {
+    @extend .button, .button--brand-2;
+}

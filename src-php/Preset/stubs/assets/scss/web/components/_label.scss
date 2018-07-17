@@ -1,0 +1,25 @@
+/** @define label **/
+label {
+    @include type-setting('p');
+
+    color: $colour-font-medium;
+    display: inline-block;
+    margin-bottom: $site-spacing/2;
+}
+
+.label {
+    &--small {
+        @include type-setting('p');
+
+        color: $colour-primary;
+    }
+
+    &--required {
+        &::after {
+            content: '*';
+            display: inline-block;
+            margin-left: $site-spacing/4;
+            color: inherit;
+        }
+    }
+}

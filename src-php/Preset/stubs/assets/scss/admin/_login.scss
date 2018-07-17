@@ -1,0 +1,42 @@
+.authentication {
+    height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    background: map-get($colours, 'grey-5');
+
+    &__panel {
+        position: relative;
+        padding: $site-spacing*3;
+        background: map-get($colours, 'white');
+        border-radius: $border-radius-primary;
+        box-shadow: 0px 0px 5px 0px map-get($colours, 'grey-4');
+    }
+
+    h1 {
+        @include type-setting('h3');
+
+        margin-bottom: $site-spacing*2;
+        color: map-get($colours, 'grey-2');
+    }
+
+    label {
+        @extend .label--small;
+
+        color: map-get($colours, 'grey-3') !important;
+    }
+
+    .authentication__forgotten-password {
+        @include type-setting('small');
+
+        display: block;
+        color: map-get($colours, 'grey-3');
+    }
+
+    .button--authentication {
+        @extend .button--brand-1;
+
+        margin-top: $site-spacing;
+    }
+}
