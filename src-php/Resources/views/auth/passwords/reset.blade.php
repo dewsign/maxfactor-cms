@@ -19,7 +19,7 @@
                     @include('maxfactor::partials.form.password-confirmation')
 
                     <div class="form__field">
-                        <button type="submit" class="button button--primary">
+                        <button type="submit" class="button button--authentication">
                             @lang('Reset Password')
                         </button>
                     </div>

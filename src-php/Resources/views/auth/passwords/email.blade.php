@@ -15,7 +15,7 @@
                     @include('maxfactor::partials.form.email')
 
                     <div class="form__field">
-                        <button type="submit" class="button button--primary">
+                        <button type="submit" class="button button--authentication">
                             @lang('Send')
                         </button>
                     </div>
