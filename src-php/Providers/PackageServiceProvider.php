@@ -30,7 +30,7 @@ class PackageServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->mergeMarkdownConfig();
     }
 
     /**
@@ -102,5 +102,15 @@ class PackageServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/../Database/seeds' => base_path('database/seeds')
         ], 'seeds');
+    }
+
+    /**
+     * Set our desired config for rendering Markdown
+     *
+     * @return void
+     */
+    private function mergeMarkdownConfig()
+    {
+        $this->mergeConfigFrom(__DIR__."/../Configs/markdown.php", 'markdown');
     }
 }
