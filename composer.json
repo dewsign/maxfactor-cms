@@ -15,7 +15,8 @@
         "silvanite/brandenburg": "^1.0",
         "dewsign/pusher-agent": "^1.0",
         "tightenco/ziggy": "^0.6.6",
-        "pusher/pusher-php-server": "^3.1"
+        "pusher/pusher-php-server": "^3.1",
+        "andreasindal/laravel-markdown": "^3.0"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.1"
