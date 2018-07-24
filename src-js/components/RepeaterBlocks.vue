@@ -163,10 +163,6 @@ export default {
     },
 
     props: {
-        config: {
-            type: Object,
-            required: true,
-        },
         repeaters: {
             type: Array,
             required: false,
