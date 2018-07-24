@@ -9,6 +9,7 @@
 
 <script>
 import Dropzone from 'dropzone'
+import 'dropzone/dist/dropzone.css'
 import { FormMixin } from 'maxfactor-vue-support'
 import FlashMessageMixin from '../mixins/FlashMessageMixin'
 

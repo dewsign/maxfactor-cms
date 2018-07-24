@@ -33,7 +33,7 @@ class ImageStoreServiceProvider extends ServiceProvider
     private function publishConfig()
     {
         $this->publishes([
-            __DIR__."/../Configs/{$config}.php" => config_path("{$config}.php"),
+            __DIR__."/../Configs/{$this->config}.php" => config_path("{$this->config}.php"),
         ]);
     }
 
@@ -44,7 +44,7 @@ class ImageStoreServiceProvider extends ServiceProvider
      */
     private function mergeConfig()
     {
-        $this->mergeConfigFrom(__DIR__."/../Configs/{$config}.php", $config);
+        $this->mergeConfigFrom(__DIR__."/../Configs/{$this->config}.php", $this->config);
     }
 
     /**
