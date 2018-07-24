@@ -50,4 +50,11 @@ Route::name('admin.')
                 Route::post('{language}', 'LanguageController@update')->name('update');
                 Route::delete('{language}', 'LanguageController@destroy')->name('destroy');
             });
+
+        // Image
+        Route::group(['prefix' => 'images', 'as' => 'image.'], function () {
+            Route::get('{options}/{image_id}.{image_ext}', 'ImageController@show')->name('show');
+            Route::post('create', 'ImageController@store')->name('create');
+            Route::delete('{image_id}', 'ImageController@destroy')->name('delete');
+        });
     });

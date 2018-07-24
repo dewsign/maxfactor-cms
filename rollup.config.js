@@ -10,9 +10,11 @@ export default {
     external: [
         'vue',
         'vuex',
+        'lodash',
+        'slugify',
+        'dropzone',
         'collect.js',
         'maxfactor-vue-support',
-        'lodash',
     ],
     plugins: [
         RollupPluginVue(),

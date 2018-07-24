@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Modules\ImageStore;
+namespace Maxfactor\CMS\Modules\ImageStore;
 
 use Illuminate\Support\Carbon;
 

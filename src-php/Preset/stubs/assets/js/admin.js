@@ -3,7 +3,7 @@ import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import XModel from '@thesold/x-model'
 import { PusherAgent } from 'ajax-store'
-import { App, CanCurrentUser } from 'maxfactor-cms'
+import { App, CanCurrentUser, ContentCard } from 'maxfactor-cms'
 
 import './bootstrap'
 import './admin/bootstrap'
@@ -18,6 +18,7 @@ import VueRouter from './admin/router'
  */
 
 Vue.component(XModel.name, XModel)
+Vue.component(ContentCard.name, ContentCard)
 
 /**
  * Vue Plugins
