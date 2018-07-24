@@ -34,7 +34,7 @@ class LaravelPreset extends Preset
             'ajax-store' => '^1.0.6',
             'browser-sync' => '2.24.5',
             'browser-sync-webpack-plugin' => '2.2.2',
-            'maxfactor-cms' => '^1.0.7',
+            'maxfactor-cms' => '^1.1.1',
             'maxfactor-sass' => '^1.7.6',
             'vue' => '^2.5.16',
             'vue-router' => '^3.0.1',
