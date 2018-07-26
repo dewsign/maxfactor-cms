@@ -4,10 +4,11 @@
     "description": "Maxfactor CMS",
     "main": "dist-js/index.js",
     "scripts": {
-        "build": "rollup -c",
+        "build": "rollup -mc",
         "watch": "rollup -mwc",
         "test": "echo \"Error: no test specified\" && exit 1",
-        "precommit": "lint-staged"
+        "precommit": "lint-staged",
+        "prepublish": "npm run build"
     },
     "files": [
         "dist-js/*",
